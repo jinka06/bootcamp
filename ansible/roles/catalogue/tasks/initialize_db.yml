@@ -1,13 +1,14 @@
 ---
-  - name: Copy db dump
-    copy:
-      src: dump.sql
-      dest: /tmp
+- name: Copy db dump
+  copy:
+    src: dump.sql
+    dest: /tmp
 
-  - name: Restore database
-    mysql_db:
-      name: catalogue_db
-      state: import
-      target: /tmp/dump.sql
-    run_once: true
-    ignore_errors: true
+- name: Restore database
+  community.mysql.mysql_db:
+    name: catalogue_db
+    state: import
+    target: /tmp/dump.sql
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+  run_once: true
+  ignore_errors: true

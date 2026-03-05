@@ -1,43 +1,38 @@
-pipeline{
-
+pipeline {
     agent any
 
-// uncomment the following lines by removing /* and */ to enable
-/*    tools{
-       maven 'Maven 3.6.3' 
-    }
-*/    
+    // Uncomment the following block to enable Maven tool support
+    // tools {
+    //     maven 'Maven_3.9.12'
+    // }
 
-    stages{
-        stage('one'){
-            steps{
+    stages {
+        stage('one') {
+            steps {
                 echo 'this is the first job'
                 sh 'uptime'
                 sleep 4
             }
         }
-        stage('two'){
-            steps{
+        stage('two') {
+            steps {
                 echo 'this is the second job'
                 sh 'uptime'
                 sleep 9
             }
         }
-        stage('three'){
-            steps{
+        stage('three') {
+            steps {
                 echo 'this is the third job'
                 sh 'uptime'
                 sleep 7
             }
         }
     }
-    
-    post{
-        always{
+
+    post {
+        always {
             echo 'this pipeline has completed...'
         }
-        
     }
-    
 }
-

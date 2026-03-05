@@ -22,7 +22,7 @@ mysql:
   pkg:
     server: mariadb-server
     client: mariadb-client
-    python: python-mysqldb
+    python: python3-pymysql
   server: true
 
 catalogue:
