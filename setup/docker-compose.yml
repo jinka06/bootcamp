@@ -27,7 +27,7 @@ services:
     restart: always
 
   frontend:
-    image: ubuntu:22.04
+    image: codespaces/ansible-node-ubuntu:18.04
     ports:
       - "80:8079"
     networks:
@@ -39,7 +39,7 @@ services:
     restart: always
 
   catalogue:
-    image: ubuntu:22.04
+    image: codespaces/ansible-node-ubuntu:18.04
     ports:
       - "7081:80"
     networks:
@@ -51,7 +51,7 @@ services:
     restart: always
 
   carts:
-    image: ubuntu:22.04
+    image: codespaces/ansible-node-ubuntu:18.04
     ports:
       - "8081:80"
     networks:
