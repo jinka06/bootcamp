@@ -27,7 +27,7 @@ services:
       custom:
         ipv4_address: 192.168.61.15
     dns: 8.8.8.8
-    domainname: jenkins.local
+    domainname: codespaces.schoolofdevops.com
     hostname: jenkins
     restart: on-failure
     volumes:
@@ -48,7 +48,7 @@ services:
         aliases:
           - docker
     privileged: true
-    domainname: jenkins.local
+    domainname: codespaces.schoolofdevops.com
     hostname: docker
     restart: always
     volumes:
